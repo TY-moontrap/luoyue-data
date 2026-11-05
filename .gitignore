@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.vscode/
+*.db
+practice.db
+~$*
+.DS_Store
