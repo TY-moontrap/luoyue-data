@@ -9,8 +9,10 @@ luoyue-data/
 ├── data/
 │   └── data.csv        10 条模拟涉诈网址拦截记录（url, type, channel, date）
 ├── read_data.py        练习①：读 CSV → 探查 → 按类型计数 → try/except 抓错
+├── count_report.py     练习②：按渠道统计数量，输出 result.csv
 ├── mytools.py          可复用函数：load_data() / count_by_type()
 ├── main.py             主脚本：调用 mytools，打印统计结果
+├── result.csv          count_report.py 生成的渠道统计结果
 └── .gitignore          排除 __pycache__、.vscode、*.db
 ```
 
@@ -18,7 +20,8 @@ luoyue-data/
 
 ```bash
 cd D:/luoyue-data
-python main.py
+python main.py          # 统计各诈骗类型数量
+python count_report.py  # 按渠道统计，写入 result.csv
 ```
 
 预期输出：
@@ -47,3 +50,4 @@ type
 
 - 2026-11-04 装好 Python 3.13 + pandas，跑通第一个读 CSV 的脚本
 - 2026-11-04 把脚本拆成 mytools.py + main.py，学会 import
+- 2026-11-06 新增 count_report.py：用 value_counts() 按渠道统计，结果写出到 result.csv
